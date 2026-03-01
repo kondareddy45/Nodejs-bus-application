@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2 class="text-center">Available Buses</h2>
+  <div class="row">
+    <% buses.forEach(bus => { %>
+      <div class="col-md-4">
+        <div class="card p-3 mb-4 shadow">
+          <h5><%= bus.name %></h5>
+          <p><%= bus.from %> → <%= bus.to %></p>
+          <p>Departure: <%= bus.departureTime %></p>
+          <p>Price: ₹<%= bus.price %></p>
+          <a href="/bus/<%= bus._id %>" class="btn btn-primary">Select Seats</a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>

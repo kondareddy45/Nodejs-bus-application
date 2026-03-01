@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h3>Select Seat - <%= bus.name %></h3>
+  <form action="/book" method="POST">
+    <input type="hidden" name="busId" value="<%= bus._id %>">
+
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" name="passengerName" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Seat Number</label>
+      <input type="number" name="seatNumber" min="1" max="<%= bus.seats %>" class="form-control" required>
+    </div>
+
+    <button class="btn btn-success">Confirm Booking</button>
+  </form>
+</div>
